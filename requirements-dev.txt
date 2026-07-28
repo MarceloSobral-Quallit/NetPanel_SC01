@@ -1,0 +1,4 @@
+# Ferramentas locais para identificação e gravação da SC01.
+# ESP-IDF/LVGL serão adicionados em uma etapa própria.
+esptool>=5.0,<6.0
+
