@@ -10,7 +10,7 @@
 - [x] Validar comunicação USB em `COM3`.
 - [x] Confirmar ESP32-S3, 16 MB Flash e 2 MB PSRAM.
 - [x] Criar ambiente virtual com `esptool`.
-- [ ] Inicializar repositório Git.
+- [x] Inicializar repositório Git e publicar a branch `main` no GitHub.
 - [ ] Instalar e validar ESP-IDF em versão definida.
 - [ ] Definir versão inicial do firmware: `0.1.0`.
 
