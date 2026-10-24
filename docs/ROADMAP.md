@@ -1,6 +1,6 @@
 # Roadmap — NetPanel SC01 Plus
 
-**Estado atual:** hardware identificado; comunicação USB validada; ambiente local de diagnóstico criado.
+**Estado atual:** hardware, USB, Flash e PSRAM identificados; ESP-IDF 5.5.5 instalado; backup/restauração integral validados. A inicialização do LCD ainda não está validada. Consulte também `docs/TENTATIVAS_E_ERROS.md`.
 
 ## Marco 0 — Fundação do projeto
 
@@ -11,7 +11,7 @@
 - [x] Confirmar ESP32-S3, 16 MB Flash e 2 MB PSRAM.
 - [x] Criar ambiente virtual com `esptool`.
 - [x] Inicializar repositório Git e publicar a branch `main` no GitHub.
-- [ ] Instalar e validar ESP-IDF em versão definida.
+- [x] Instalar e validar ESP-IDF 5.5.5.
 - [ ] Definir versão inicial do firmware: `0.1.0`.
 
 **Aceite:** qualquer computador de desenvolvimento consegue recriar o ambiente e consultar a placa.
@@ -20,9 +20,11 @@
 
 **Objetivo:** validar o hardware real sem depender do servidor NetPanel.
 
-- [ ] Criar projeto ESP-IDF e configuração da SC01 Plus.
+- [x] Criar projetos ESP-IDF experimentais para diagnóstico via USB.
+- [x] Criar e validar backup integral de 16 MB; validar restauração e retorno visual ao firmware original.
 - [ ] Criar tabela de partições preparada para OTA A/B.
-- [ ] Inicializar LCD e backlight.
+- [ ] Obter e validar a sequência de inicialização específica do LCD antes de outro teste de tela.
+- [ ] Inicializar LCD e backlight com imagem estável.
 - [ ] Inicializar touch e exibir coordenadas.
 - [ ] Exibir chip, Flash, PSRAM, heap, MAC e versão.
 - [ ] Conectar ao Wi-Fi por configuração temporária.
@@ -110,11 +112,11 @@
 
 | Tema | Decisão necessária antes do marco |
 |---|---|
-| ESP-IDF | Versão a padronizar | 1 |
+| LCD | Fonte, firmware ou documentação oficial com sequência de inicialização do painel | 1 |
 | Rede | SSID, VLAN e regra de firewall | 2 |
 | Dell | Endereço, porta e HTTP/HTTPS inicial | 3 e 4 |
 | Interface | Tema, equipamentos visíveis e alertas | 5 |
 
 ## Próxima ação recomendada
 
-Iniciar o Marco 0: criar o repositório Git e instalar o ESP-IDF, então gerar o esqueleto do firmware `SC01_DIAG v0.1.0`.
+Concluir a identificação do LCD: localizar fonte ou firmware oficial da Panlee/WT32-SC01 Plus que revele o controlador, a pinagem e a sequência de inicialização. Só então gerar um novo diagnóstico de tela, com o backup original como ponto de retorno.

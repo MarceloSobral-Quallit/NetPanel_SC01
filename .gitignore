@@ -1,5 +1,15 @@
 # Local Python environment and tooling state
 .venv/
+.tools/
+.private/
+backups/
 __pycache__/
 *.py[cod]
 
+# ESP-IDF build outputs (firmware/, diag/, diag_direct/)
+build/
+build_direct/
+managed_components/
+sdkconfig
+sdkconfig.old
+dependencies.lock
